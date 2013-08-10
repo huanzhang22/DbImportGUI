@@ -1,18 +1,12 @@
 package DbImportGUI.gui;
 
-import javax.swing.JFrame;
-
 public class Main {
-	public static GUIConfig config = new GUIConfig();
+	public static GUIConfig config;
 	public static MainFrame mf;
-	public static final String newLine = "\n";
-	
 	public static void main(String[] args) {
 		// read configuration file
 		readConfig(args);
 		mf = new MainFrame();
-		mf.setTitle(config.title);
-		mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mf.init();
 		mf.pack();
 		mf.setVisible(true);
